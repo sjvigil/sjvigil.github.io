@@ -42,9 +42,9 @@ getText("./quotes.txt");
 async function getText(file) {
   let myObject = await fetch(file);
   let input = await myObject.text();
-  lines = input.split('\n')
+  lines = input.split('\n');
   randomLine = lines[Math.floor(Math.random() * lines.length)];
-  quote = randomLine.split('|')
+  quote = randomLine.split('|');
   document.getElementById("demo").innerHTML = quote[0];
 }
 //const input = "Try not to become a man of success, but rather try to become a man of value.|Albert Einstein\nNow these points of data make a beautiful line, and we're out of beta and releasing on time.|GLaDOS\nHe only can, who says he will.\nWhere there's a will, there's a way"
