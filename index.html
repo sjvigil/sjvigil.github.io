@@ -30,9 +30,9 @@
 <section id="section-1">
   <video id="video-background" type="video/mp4" poster="./uA41GmyyG8IMaxXdb.webp" autoplay="" loop="" muted="" playsinline="" src="./uA41GmyyG8IMaxXdb.mp4"></video>
     <span>
-      Try not to become a man of success, but rather try to become a man of value.
-      <p align="right">Albert Einstein</p>
-      <p id="demo">Fetch a file to change this text.</p>
+      //Try not to become a man of success, but rather try to become a man of value.
+      //<p align="right">Albert Einstein</p>
+      <p id="demo">Fetching quote...</p>
     </span>
 </section>
 
@@ -44,7 +44,8 @@ async function getText(file) {
   let input = await myObject.text();
   lines = input.split('\n')
   randomLine = lines[Math.floor(Math.random() * lines.length)];
-  document.getElementById("demo").innerHTML = randomLine;
+  quote = randomLine.split('|')
+  document.getElementById("demo").innerHTML = quote[0];
 }
 //const input = "Try not to become a man of success, but rather try to become a man of value.|Albert Einstein\nNow these points of data make a beautiful line, and we're out of beta and releasing on time.|GLaDOS\nHe only can, who says he will.\nWhere there's a will, there's a way"
 
