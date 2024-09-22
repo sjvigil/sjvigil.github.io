@@ -38,7 +38,6 @@
 
 <script>
 getText("./quotes.txt");
-
 async function getText(file) {
   let myObject = await fetch(file);
   let input = await myObject.text();
@@ -50,12 +49,6 @@ async function getText(file) {
     document.getElementById("auth").innerHTML = quote[1];
   }
 }
-//const input = "Try not to become a man of success, but rather try to become a man of value.|Albert Einstein\nNow these points of data make a beautiful line, and we're out of beta and releasing on time.|GLaDOS\nHe only can, who says he will.\nWhere there's a will, there's a way"
-
-//const lines = input.split('\n');
-//const randomLine = lines[Math.floor(Math.random() * lines.length)];
-//document.getElementById('demo').innerHTML = randomLine;
-
 </script>
 
 </body></html>
