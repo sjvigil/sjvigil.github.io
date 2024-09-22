@@ -1,4 +1,5 @@
-<html><head><title>Shane Vigil</title></head><body id="site">
+<html><head><title>Shane Vigil</title><meta name="viewport" content="width=device-width, initial-scale=1"></head><body id="site">
+
 <style>
   #site {
   background-color: black;
@@ -25,11 +26,21 @@
     font-size: 24px;
   }
 </style>
+
 <section id="section-1">
   <video id="video-background" type="video/mp4" poster="./uA41GmyyG8IMaxXdb.webp" autoplay="" loop="" muted="" playsinline="" src="./uA41GmyyG8IMaxXdb.mp4"></video>
     <span>
       Try not to become a man of success, but rather try to become a man of value.
       <p align="right">Albert Einstein</p>
+      <p id="demo">Fetch a file to change this text.</p>
     </span>
 </section>
+
+<script>
+let file = "./quotes.txt"
+fetch (file)
+.then(x => x.text())
+.then(y => document.getElementById("demo").innerHTML = y);
+</script>
+
 </body></html>
