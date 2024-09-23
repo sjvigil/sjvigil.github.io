@@ -5,38 +5,39 @@
   body {
   background-color: black;
   }
-  #section-1{
-    display: flex;
+  div {
     position: relative;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+    height: 90vh;
+    text-align: left;
+    display: flex;
+    margin: auto;
+
   }
-  #section-1 > #video-background{
+  video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%; 
-    z-index: -1;
+    top: 0;
+    left: 0;
   }
-  #section-1 > span{
-    color: white;
-    z-index: 0;
+  span {  
+    color: white; 
     text-shadow: 1px 1px black;
     font-size: 24px;
     padding: 10px;  
+    margin: auto;
   }
 </style>
 
-<section id="section-1">
-  <video id="video-background" type="video/mp4" poster="./uA41GmyyG8IMaxXdb.webp" autoplay="" loop="" muted="" playsinline="" src="./uA41GmyyG8IMaxXdb.mp4"></video>
-  <span>
-    <p id="text">It is not the critic who counts; not the man who points out how the strong man stumbles, or where the doer of deeds could have done them better. The credit belongs to the man who is actually in the arena, whose face is marred by dust and sweat and blood; who strives valiantly; who errs, who comes short again and again, because there is no effort without error and shortcoming; but who does actually strive to do the deeds; who knows great enthusiasms, the great devotions; who spends himself in a worthy cause; who at the best knows in the end the triumph of high achievement, and who at the worst, if he fails, at least fails while daring greatly, so that his place shall never be with those cold and timid souls who neither know victory nor defeat.</p>
+<video id="video-background" type="video/mp4" poster="./uA41GmyyG8IMaxXdb.webp" autoplay="" loop="" muted="" playsinline="" src="./uA41GmyyG8IMaxXdb.mp4"></video>
+
+<div>
+    <span>
+    <section id="text">It is not the critic who counts; not the man who points out how the strong man stumbles, or where the doer of deeds could have done them better. The credit belongs to the man who is actually in the arena, whose face is marred by dust and sweat and blood; who strives valiantly; who errs, who comes short again and again, because there is no effort without error and shortcoming; but who does actually strive to do the deeds; who knows great enthusiasms, the great devotions; who spends himself in a worthy cause; who at the best knows in the end the triumph of high achievement, and who at the worst, if he fails, at least fails while daring greatly, so that his place shall never be with those cold and timid souls who neither know victory nor defeat.</section>
     <p id="auth" align="right">Theodore Roosevelt</p>
-  </span>
-</section>
+    </span>
+</div>
 
 <script>
 getText("./quotes.txt");
